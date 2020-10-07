@@ -101,6 +101,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 210,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
+                        boxShadow: [
+                          BoxShadow(
+                            color: kTenBlackColor,
+                            blurRadius: 10,
+                            spreadRadius: 2,
+                            offset: Offset(5.0, 5.0),
+                          )
+                        ],
                         color: Color(cards[index].cardBackground),
                       ),
                       child: Stack(
@@ -137,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // Operation Section
               Padding(
                 padding:
-                EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
+                    EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -241,8 +249,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
-                                    image:
-                                        AssetImage(transactions[index].photo),
+                                    image: AssetImage(
+                                        transactions[index].photo),
                                   ),
                                 ),
                               ),
