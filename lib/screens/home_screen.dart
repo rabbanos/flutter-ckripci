@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kLightBlueColor,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.only(top: 8),
@@ -136,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // Operation Section
               Padding(
                 padding:
-                    EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
+                EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -150,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: map<Widget>(
                         datas,
-                        (index, selected) {
+                            (index, selected) {
                           return Container(
                             alignment: Alignment.centerLeft,
                             height: 9,
@@ -205,83 +206,87 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: kBlackColor),
                 ),
               ),
-              ListView.builder(
-                itemCount: transactions.length,
-                padding: EdgeInsets.only(left: 16, right: 16),
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 76,
-                    margin: EdgeInsets.only(bottom: 13),
-                    padding: EdgeInsets.only(
-                        left: 24, top: 12, bottom: 12, right: 22),
-                    decoration: BoxDecoration(
-                      color: kWhiteColor,
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [
-                        BoxShadow(
-                          color: kTenBlackColor,
-                          blurRadius: 10,
-                          spreadRadius: 5,
-                          offset: Offset(8.0, 8.0),
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 57,
-                              width: 57,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(transactions[index].photo),
+              Container(
+                height: 265,
+                child: ListView.builder(
+                  itemCount: transactions.length,
+                  padding: EdgeInsets.only(left: 16, right: 16),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 76,
+                      margin: EdgeInsets.only(bottom: 13),
+                      padding: EdgeInsets.only(
+                          left: 24, top: 12, bottom: 12, right: 22),
+                      decoration: BoxDecoration(
+                        color: kWhiteColor,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: kTenBlackColor,
+                            blurRadius: 10,
+                            spreadRadius: 2,
+                            offset: Offset(5.0, 5.0),
+                          )
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                height: 57,
+                                width: 57,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage(transactions[index].photo),
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 13,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Text(
-                                  transactions[index].name,
-                                  style: GoogleFonts.inter(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w700,
-                                      color: kBlackColor),
-                                ),
-                                Text(
-                                  transactions[index].date,
-                                  style: GoogleFonts.inter(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w400,
-                                      color: kGreyColor),
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Text(
-                              transactions[index].activity,
-                              style: GoogleFonts.inter(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700,
-                                  color: kBlueColor),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  );
-                },
+                              SizedBox(
+                                width: 13,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    transactions[index].name,
+                                    style: GoogleFonts.inter(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w700,
+                                        color: kBlackColor),
+                                  ),
+                                  Text(
+                                    transactions[index].date,
+                                    style: GoogleFonts.inter(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400,
+                                        color: kGreyColor),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                transactions[index].activity,
+                                style: GoogleFonts.inter(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
+                                    color: kBlueColor),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
               )
             ],
           ),
@@ -321,8 +326,8 @@ class _OperationCardState extends State<OperationCard> {
             BoxShadow(
               color: kTenBlackColor,
               blurRadius: 10,
-              spreadRadius: 5,
-              offset: Offset(8.0, 8.0),
+              spreadRadius: 2,
+              offset: Offset(5.0, 5.0),
             )
           ],
           borderRadius: BorderRadius.circular(15),
