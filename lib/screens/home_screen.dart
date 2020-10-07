@@ -97,17 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     return Container(
                       margin: EdgeInsets.only(right: 10),
                       height: 99,
-                      width: 244,
+                      width: 210,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(28),
+                        borderRadius: BorderRadius.circular(18),
                         color: Color(cards[index].cardBackground),
                       ),
                       child: Stack(
                         children: <Widget>[
-                          Positioned(
-                            child:
-                                SvgPicture.asset(cards[index].cardElementTop),
-                          ),
                           Positioned(
                             left: 29,
                             bottom: 55,
@@ -202,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding:
                     EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
                 child: Text(
-                  'Transaction Histories',
+                  'History',
                   style: GoogleFonts.inter(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
@@ -274,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: <Widget>[
                             Text(
-                              transactions[index].amount,
+                              transactions[index].activity,
                               style: GoogleFonts.inter(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w700,

@@ -2,33 +2,45 @@ class TransactionModel {
   String name;
   String photo;
   String date;
-  String amount;
+  String activity;
 
-  TransactionModel(this.name, this.photo, this.date, this.amount);
+  TransactionModel(this.name, this.photo, this.date, this.activity);
 }
 
 List<TransactionModel> transactions = transactionData
     .map((item) => TransactionModel(
-        item['name'], item['photo'], item['date'], item['amount']))
+        item['name'], item['photo'], item['date'], item['activity']))
     .toList();
 
 var transactionData = [
   {
-    "name": "Uber Ride",
-    "photo": "assets/images/uber_photo.png",
+    "name": "Lorem Ipsum",
+    "photo": "assets/images/user_photo.png",
     "date": "1st Apr 2020",
-    "amount": "-\$35.214"
+    "activity": "Login"
   },
   {
-    "name": "Nike Outlet",
-    "photo": "assets/images/nike_photo.png",
+    "name": "Dolor Sit Amet",
+    "photo": "assets/images/user_photo.png",
     "date": "30th Mar 2020",
-    "amount": "-\$100.00"
+    "activity": "Edit"
   },
   {
-    "name": "Payment Received",
+    "name": "Consectetur",
     "photo": "assets/images/user_photo.png",
     "date": "15th Mar 2020",
-    "amount": "+\$250.00"
+    "activity": "Import"
+  },
+  {
+    "name": "Lapang Caer",
+    "photo": "assets/images/user_photo.png",
+    "date": "1th Mar 2020",
+    "activity": "Login"
+  },
+  {
+    "name": "Dolor Sit Amet",
+    "photo": "assets/images/user_photo.png",
+    "date": "30th Feb 2020",
+    "activity": "Login"
   }
 ];

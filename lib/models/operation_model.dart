@@ -13,18 +13,18 @@ List<OperationModel> datas = operationsData
 
 var operationsData = [
   {
-    "name": "Money\nTransfer",
-    "selectedIcon": "assets/svg/money_transfer_white.svg",
-    "unselectedIcon": "assets/svg/money_transfer_blue.svg"
-  },
-  {
-    "name": "Bank\nWithdraw",
-    "selectedIcon": "assets/svg/bank_withdraw_white.svg",
-    "unselectedIcon": "assets/svg/bank_withdraw_blue.svg"
-  },
-  {
-    "name": "Insight\nTracking",
+    "name": "Import\nData Backlog",
     "selectedIcon": "assets/svg/insight_tracking_white.svg",
-    "unselectedIcon": "assets/svg/insight_tracking_blue.svg"
+    "unselectedIcon": "assets/svg/fileimport.svg"
+  },
+  {
+    "name": "Import\nRTLH",
+    "selectedIcon": "assets/svg/insight_tracking_white.svg",
+    "unselectedIcon": "assets/svg/fileimport.svg"
+  },
+  {
+    "name": "Import\nPengembang",
+    "selectedIcon": "assets/svg/insight_tracking_white.svg",
+    "unselectedIcon": "assets/svg/fileimport.svg"
   },
 ];

@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-const kBlueColor = Color(0xFF1E1E99);
+const kBlueColor = Color(0xFF29b6f6);
 const kTwentyBlueColor = Color(0x201E1E99);
 const kPinkColor = Color(0xFFFF70A3);
 const kWhiteColor = Color(0xFFFFFFFF);

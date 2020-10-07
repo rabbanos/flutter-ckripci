@@ -4,11 +4,9 @@ class CardModel {
   String cardExpired;
   String cardType;
   int cardBackground;
-  String cardElementTop;
-  String cardElementBottom;
 
   CardModel(this.jenisData, this.user, this.cardExpired, this.cardType,
-      this.cardBackground, this.cardElementTop, this.cardElementBottom);
+      this.cardBackground);
 }
 
 List<CardModel> cards = cardData
@@ -19,8 +17,6 @@ List<CardModel> cards = cardData
         item['cardExpired'],
         item['cardType'],
         item['cardBackground'],
-        item['cardElementTop'],
-        item['cardElementBottom'],
       ),
     )
     .toList();
@@ -31,26 +27,20 @@ var cardData = [
     "user": "198.231",
     "cardExpired": "03-01-2023",
     "cardType": "assets/images/mastercard_logo.png",
-    "cardBackground": 0xFF1E1E99,
-    "cardElementTop": "assets/svg/ellipse_top_pink.svg",
-    "cardElementBottom": "assets/svg/ellipse_bottom_pink.svg"
+    "cardBackground": 0xFF29b6f6,
   },
   {
     "jenisData": "RTLH",
     "user": "56.754",
     "cardExpired": "03-01-2025",
     "cardType": "assets/images/mastercard_logo.png",
-    "cardBackground": 0xFFFF70A3,
-    "cardElementTop": "assets/svg/ellipse_top_blue.svg",
-    "cardElementBottom": "assets/svg/ellipse_bottom_blue.svg"
+    "cardBackground": 0xFF29b6f6,
   },
   {
     "jenisData": "Pengembang",
     "user": "12.084",
     "cardExpired": "03-01-2025",
     "cardType": "assets/images/mastercard_logo.png",
-    "cardBackground": 0xFF1E1E99,
-    "cardElementTop": "assets/svg/ellipse_top_pink.svg",
-    "cardElementBottom": "assets/svg/ellipse_bottom_pink.svg"
+    "cardBackground": 0xFF29b6f6,
   }
 ];
