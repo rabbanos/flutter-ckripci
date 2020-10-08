@@ -101,14 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 210,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
-                        boxShadow: [
-                          BoxShadow(
-                            color: kTenBlackColor,
-                            blurRadius: 10,
-                            spreadRadius: 2,
-                            offset: Offset(5.0, 5.0),
-                          )
-                        ],
                         color: Color(cards[index].cardBackground),
                       ),
                       child: Stack(
@@ -145,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // Operation Section
               Padding(
                 padding:
-                    EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
+                EdgeInsets.only(left: 16, bottom: 13, top: 29, right: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -214,6 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: kBlackColor),
                 ),
               ),
+<<<<<<< HEAD
               GestureDetector(
                 onTap: (){
                   print('{transactions[index].photo}');
@@ -256,6 +249,45 @@ class _HomeScreenState extends State<HomeScreen> {
                                       image: AssetImage(
                                           transactions[index].photo),
                                     ),
+=======
+              Container(
+                height: 265,
+                child: ListView.builder(
+                  itemCount: transactions.length,
+                  padding: EdgeInsets.only(left: 16, right: 16),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 76,
+                      margin: EdgeInsets.only(bottom: 13),
+                      padding: EdgeInsets.only(
+                          left: 24, top: 12, bottom: 12, right: 22),
+                      decoration: BoxDecoration(
+                        color: kWhiteColor,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: kTenBlackColor,
+                            blurRadius: 10,
+                            spreadRadius: 2,
+                            offset: Offset(5.0, 5.0),
+                          )
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                height: 57,
+                                width: 57,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage(transactions[index].photo),
+>>>>>>> parent of e7d9626... Initial commit
                                   ),
                                 ),
                                 SizedBox(
