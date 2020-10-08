@@ -249,7 +249,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                       image: AssetImage(
                                           transactions[index].photo),
                                     ),
-=======
               Container(
                 height: 265,
                 child: ListView.builder(
@@ -287,7 +286,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   image: DecorationImage(
                                     image:
                                         AssetImage(transactions[index].photo),
->>>>>>> parent of e7d9626... Initial commit
                                   ),
                                 ),
                                 SizedBox(
